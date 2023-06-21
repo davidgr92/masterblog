@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Blog</title>
+    <script src="https://use.fontawesome.com/0b5102394a.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Flask Blog!</h1>
+    {% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p><em>Written by {{ post.author }}</em></p>
+        <form action="{{ url_for('like', post_id=post.id) }}">
+            <button><i class="fa fa-thumbs-o-up" style="font-size:24px;">{{ post.likes }}</i></button>
+        </form>
+        <p>{{ post.content }}</p>
+        <form action="{{ url_for('delete', post_id=post.id) }}">
+            <button type="submit">Delete</button>
+        </form>
+        <form action="{{ url_for('update', post_id=post.id) }}">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    {% endfor %}
+    <a href="{{ url_for('add') }}">Click here to add a post</a>
+</body>
+</html>

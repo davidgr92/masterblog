@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "author": "David G",
+        "title": "First Post 2",
+        "content": "David G",
+        "likes": 2
+    },
+    {
+        "id": 2,
+        "author": "Jane Doe",
+        "title": "Second Post 1 2",
+        "content": "Jane Doe",
+        "likes": 1
+    },
+    {
+        "id": 3,
+        "author": "David 2",
+        "title": "Testing once again",
+        "content": "If this works properly\r\n\r\n",
+        "likes": 1
+    },
+    {
+        "id": 4,
+        "author": "David 2",
+        "title": "Adding new fresh ",
+        "content": "post ",
+        "likes": 0
+    }
+]
